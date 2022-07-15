@@ -28,7 +28,7 @@
                 <!-- Logo -->
                 <div class="logo mx-4">
                     <a class="navbar-brand" href="#">
-                        <img src="./img/logo-kgb.png" style="height: 120px"/>
+                        <img src="./img/logo-kgb.png" style="height: 100px"/>
                     </a>
                 </div>
                 <!-- Button for burger menu-->
@@ -39,13 +39,13 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto mx-4">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="views/homeView.php">Accueil<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Missions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Connexion</a>
+                            <a class="nav-link" href="views/loginView.php">Connexion</a>
                         </li>
                     </ul>
                 </div>
