@@ -55,9 +55,8 @@
 
         <!------------- Main --------------->
         <main class="container-fluid bg-img">
-
-            <h1>Bienvenue sur le site du KGB</h1>
-            
+            <h1><?= $title; ?></h1>
+            <?= $content; ?>
         </main>
 
 
