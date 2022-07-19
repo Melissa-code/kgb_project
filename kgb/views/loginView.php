@@ -100,5 +100,5 @@
 <?php
     $content = ob_get_clean();
     $title = "Connexion";
-    require('templates/template.php');
+    require('../templates/template.php');
 ?>

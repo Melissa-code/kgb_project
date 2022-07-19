@@ -13,7 +13,7 @@
     <!-- CSS Bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>KGB</title>
 </head>
 
@@ -28,7 +28,7 @@
                 <!-- Logo -->
                 <div class="logo mx-4">
                     <a class="navbar-brand" href="#">
-                        <img src="./img/logo-kgb.png" style="height: 100px"/>
+                        <img src="../img/logo-kgb.png" style="height: 100px"/>
                     </a>
                 </div>
                 <!-- Button for burger menu-->
@@ -39,13 +39,13 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto mx-4">
                         <li class="nav-item active">
-                            <a class="nav-link" href="views/homeView.php">Accueil<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="../views/homeView.php">Accueil<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Missions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="views/loginView.php">Connexion</a>
+                            <a class="nav-link" href="../views/loginView.php">Connexion</a>
                         </li>
                     </ul>
                 </div>

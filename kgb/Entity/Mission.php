@@ -14,6 +14,7 @@ class Mission {
 
     const INVALID_CODE = 1;
     const INVALID_TITLE = 2;
+    const INVALID_COUNTRY = 3;
 
     /* ************ Constructor ********* */ 
     public function __construct($data = []) {
@@ -28,7 +29,9 @@ class Mission {
     public function hydrate($data) {
         foreach($data as $attribute => $value) {
             $setterMethod = 'set'.ucfirst($attribute); 
-            $this->$setterMethod($value);
+            if(method_exists($this, $setterMethod)){
+                $this->$setterMethod($value);
+            }
         }
     }
 
@@ -55,7 +58,7 @@ class Mission {
     public function getTitle(){return $this->title;}
 
     public function setTitle($title){
-        if(!is_string($title) || empty($title)){
+        if(!is_string($title) || empty($title) || strlen($title) < 3 || strlen($title) > 100){
             $this->error[] = self::INVALID_TITLE;
         } else {
             $this->title = $title;
@@ -69,7 +72,16 @@ class Mission {
 
     // country
     public function getCountry(){return $this->country;}
-    public function setCountry($country){$this->country = $country; return $this; }
+
+    public function setCountry($country){
+        if(!is_string($country) || empty($country)) {
+            $this->error[] = self::INVALID_COUNTRY ;
+        } else {
+            $this->code = (string) $country;
+            return $this;
+        }
+    }
+  
 
     // duration
     public function getDuration(){return $this->duration;}
@@ -84,9 +96,10 @@ class Mission {
     public function setType($type){$this->type = $type;return $this;}
 
 
+    
     /* ************ Methods ********* */ 
 
-    public function isMissionValide() {
+    public function isMissionValid() {
         return !empty($this->code) || !empty($this->title) || !empty($this->country);
     }
 
